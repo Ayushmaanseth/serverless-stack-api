@@ -2,7 +2,7 @@ import * as uuid from "uuid";
 import handler from "./libs/handler-lib";
 import dynamoDb from "./libs/dynamodb-lib";
 
-AWS.config.update({ region: "ap-south-1" });
+// AWS.config.update({ region: "ap-south-1" });
 
 export const main = handler(async (event, context) => {
   const data = JSON.parse(event.body);
