@@ -50,3 +50,9 @@ env.yml
 
 # Jetbrains IDEs
 .idea
+
+#misc directory
+misc
+
+# Env
+.env

@@ -1,0 +1,23 @@
+Resources:
+  #CloudFormation syntax - setting 4xx errors to include headers
+  # before passing it to Lambda
+  GatewayResponseDefault4XX:
+    Type: 'AWS::ApiGateway::GatewayResponse'
+    Properties:
+      ResponseParameters:
+         gatewayresponse.header.Access-Control-Allow-Origin: "'*'"
+         gatewayresponse.header.Access-Control-Allow-Headers: "'*'"
+      ResponseType: DEFAULT_4XX
+      RestApiId:
+        Ref: 'ApiGatewayRestApi'
+  #CloudFormation syntax - setting 5xx errors to include headers
+  # before passing it to Lambda
+  GatewayResponseDefault5XX:
+    Type: 'AWS::ApiGateway::GatewayResponse'
+    Properties:
+      ResponseParameters:
+         gatewayresponse.header.Access-Control-Allow-Origin: "'*'"
+         gatewayresponse.header.Access-Control-Allow-Headers: "'*'"
+      ResponseType: DEFAULT_5XX
+      RestApiId:
+        Ref: 'ApiGatewayRestApi'
